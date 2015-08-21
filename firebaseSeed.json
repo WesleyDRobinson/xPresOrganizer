@@ -1,0 +1,29 @@
+{
+  "meetings" : {
+    "TownHall": {
+      "date": "2015-09-03T19:00",
+      "venue": "Civic Center",
+      "owner": "Wesley",
+      "timeline": [ "dinos", "pause", "newPres", "pause" ],
+      "presentationBank": ["dinos", "newPres", "unmadePresentation"],
+      "organizers": ["Wesley", "Yani", "Ash"]
+    },
+    "BusinessProposals": {
+      "date": "2015-09-08T10:30",
+      "venue": "Grace Hopper Lounge",
+      "owner": "Wesley",
+      "timeline": [ "dinos", "pause", "newPres", "pause" ],
+      "presentationBank": ["dinos", "newPres", "unmadePresentation"],
+      "organizers": ["Wesley", "Yani", "Ash"]
+    }
+  },
+  "presentations" : {
+    "dinos" : {
+      "slides" : [ "http://i.imgur.com/QpDvep6b.jpg", "http://i.imgur.com/FHmVg9Zb.jpg", "http://i.imgur.com/6JbR6gTb.jpg", "http://i.imgur.com/b24nKIdb.jpg", "http://i.imgur.com/rynexEib.jpg", "http://i.imgur.com/GjIJ1eXb.jpg", "http://i.imgur.com/D1ugt1Ub.jpg", "http://i.imgur.com/vIwPARJb.jpg" ]
+    },
+    "newPres" : {
+      "slides" : [ "http://lorempixel.com/120/120/sports/4/", "http://lorempixel.com/120/120/sports/3/", "http://lorempixel.com/120/120/sports/7/", "http://lorempixel.com/120/120/sports/2/", "http://lorempixel.com/120/120/sports/5/", "http://lorempixel.com/120/120/sports/1/", "http://lorempixel.com/120/120/sports/6/", "http://lorempixel.com/120/120/sports/8/", "http://lorempixel.com/120/120/sports/9/" ]
+    }
+  },
+  "users" : {}
+}
