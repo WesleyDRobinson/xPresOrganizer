@@ -16,7 +16,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="generator" content="OrgprO"/>
-  <title>PrOOrg</title>
+  <title>xPresOrganizer</title>
   <!-- Place favicon.ico in the `app/` directory -->
 
   <!-- Chrome for Android theme color -->
@@ -151,8 +151,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             <paper-material elevation="1">
               <h2 class="paper-font-display2">Users</h2>
 
-              <p>This is the users section</p>
-              <a href="/users/{{user.github.username}}">{{user.github.username}}</a>
+              <h3>Test Login:</h3>
+              <p>Securely login with Github account, thanks to Firebase Auth service</p>
+              <p>If you login, your username will appear here:<a href="/users/{{user.github.username}}">{{user.github.username}}</a></p>
+              <p>Logout when you're finished looking at your name!</p>
+              <p>More user integration coming soon</p>
+              <div if="{{user}}"></div>
             </paper-material>
             <paper-material elevation="1">
               <div id="login-logout">
@@ -184,6 +188,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
               <h2 class="paper-font-display2">Presentations</h2>
 
+              <p>The following presentations are ordered and sortable and automatically persist in the database! <strong>Pretty cool right?!</strong></p>
+              <p>Try it! Rearrange some photos, refresh this page and check it out.</p>
+
               <presentations-container></presentations-container>
 
             </paper-material>
@@ -194,7 +201,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             <paper-material elevation="1">
 
               <h2 class="paper-font-display2">Meetings</h2>
-
+              <p>Currently working here!!</p>
+              <p>The following meetings are also tied to the database and some parts are editable and those edits persist to the database</p>
+              <p>Making them sortable by that little icon now...</p>
               <meetings-container></meetings-container>
 
             </paper-material>
@@ -204,7 +213,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             <paper-material elevation="1">
               <h2 class="paper-font-display2">Contact</h2>
 
-              <p>This is the contact section</p>
+              <p>I really love Polymer and Web Components</p>
+              <p>I would really like to work at Flux and keep using it and them</p>
+              <p>Call me at 417.848.5114</p>
             </paper-material>
           </section>
 

@@ -76,7 +76,9 @@
           meetingName: String
         },
         computeLocation: function () {
-          return 'https://privatehub.firebaseio.com/meetings/BusinessProposals/timeline';
+          //TODO - make dynamic based on this.meetingName
+          //hardcoded while I work on the look of the element
+          return 'https://privatehub.firebaseio.com/meetings/Business Proposals/timeline';
         },
         ready: function () {
           var self = this;
