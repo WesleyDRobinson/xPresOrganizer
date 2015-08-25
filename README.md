@@ -7,4 +7,4 @@
 I'm using Polymer/ Web Components for the complete build.
 The only server/backend I'll need is Firebase.
 
-Totally live at: https://wesley.tech
+Totally live at: https://privatehub.firebaseapp.com/
