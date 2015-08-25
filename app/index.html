@@ -121,12 +121,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
         <!-- Application name -->
         <div class="middle middle-container center horizontal layout">
-          <div class="app-name">xPresentation Organizer</div>
+          <div class="app-name">Wesley Robinson</div>
         </div>
 
         <!-- Application sub title -->
         <div class="bottom bottom-container center horizontal layout">
-          <div class="bottom-title paper-font-subhead">A tool for meetings and presenters</div>
+          <div class="bottom-title paper-font-subhead">Est. 8/25/15, this is a resume/ link/ demo/ portal/ blawg? personal site</div>
         </div>
 
       </paper-toolbar>
@@ -137,11 +137,25 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
           <section data-route="home">
             <paper-material elevation="1">
-              <h2 class="paper-font-display2">Welcome!</h2>
-              <p class="paper-font-subhead">This is Wesley Robinson's Presentation Organizer</p>
-              <p class="paper-font-subhead">Built all by myself with Polymer and Firebase</p>
 
-              <p class="paper-font-body2">Eventually I'll have a tutorial here</p>
+              <h2 class="paper-font-display2">Welcome!</h2>
+              <p>On Aug 23, I climbed around in this tree looking for a job</p>
+              <iron-image src="http://i.imgur.com/6deJNVZ.jpg" style="width:400px; height:400px; background-color: lightgray;"
+                          sizing="cover" preload fade></iron-image>
+              <p>Didn't find one; so I'm still looking for a Frontend Engineering role!</p>
+              <p><a href="https://www.linkedin.com/in/wesleydrobinson">Look at me on LinkedIn</a></p>
+
+            </paper-material>
+
+            <paper-material elevation="1">
+
+              <h2 class="paper-font-display2">Site Reasoning</h2>
+              <p><a href="https://github.com/WesleyDRobinson/xPresOrganizer">See all the code for this page on Github</a></p>
+              <p>Project was just a simple rebuild of an old project to teach myself Polymer and Firebase</p>
+              <p>I'm finding this little stack is shockingly powerful and surprisingly light, like a <strong>magic wand!</strong></p>
+              <p>I also discovered hosting and deploying to Firebase is insanely easy. So as of 8/25/15 this is my personal site</p>
+              <p>I'll write up a starter article soon, it's on the roadmap!</p>
+
             </paper-material>
 
           </section>
@@ -154,7 +168,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               <p>Securely login with Github account, thanks to Firebase Auth service</p>
               <p>If you login, your username will appear here:<a href="/users/{{user.github.username}}">{{user.github.username}}</a></p>
               <p>Logout when you're finished looking at your name!</p>
-              <p>More user integration coming soon</p>
+              <p>More user integration on the roadmap</p>
               <div if="{{user}}"></div>
             </paper-material>
             <paper-material elevation="1">
@@ -187,8 +201,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
               <h2 class="paper-font-display2">Presentations</h2>
 
-              <p>The following presentations are ordered and sortable and automatically persist in the database! <strong>Pretty cool right?!</strong></p>
-              <p>Try it! Rearrange some photos, refresh this page and check it out.</p>
+              <p>The following slides are ordered and sortable and automatically persist in the database! <strong>Pretty cool right?!</strong></p>
+              <p>Try it! Rearrange some slides, refresh this page, refresh it, and check it out</p>
+              <p>"Adding Presentations" is on the roadmap; so is fixing the border disappearing&mdash;it's a <span style="font-family: Courier New">paper-material</span> thing</p>
 
               <presentations-container></presentations-container>
 
@@ -200,9 +215,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             <paper-material elevation="1">
 
               <h2 class="paper-font-display2">Meetings</h2>
-              <p>Currently working here!!</p>
               <p>The following meetings are also tied to the database and some parts are editable and those edits persist to the database</p>
-              <p>Making them sortable by that little icon now...</p>
+              <p>You will be able to add organizers and create events and all those cool features! It's all on the roadmap</p>
               <meetings-container></meetings-container>
 
             </paper-material>
@@ -212,9 +226,15 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             <paper-material elevation="1">
               <h2 class="paper-font-display2">Contact</h2>
 
-              <p>I really love Polymer and Web Components</p>
-              <p>I would really like to work at Flux and keep using it and them</p>
+              <h3 class="red">Completed as promised: <small>Roadmap item: <em>Add contact info</em></small></h3>
+              <p class="paper-font-subhead"></p>
+
+              <p>I really love the web and Javascript</p>
+              <p>I want to engineer software with a smart, fun team using interesting tech</p>
               <p>Call me at 417.848.5114</p>
+              <p>Email me at <a href="mailto:Robinson.WesleyD@gmail.com?subject=Wesley,%20you're%20Hired!%20When%20can%20you%20start?%20:)&body=Seriously%20though,%20let's%20set%20up%20a%20phone%20call">Robinson.WesleyD@gmail.com</a></p>
+              <p>Slick animations are on the roadmap</p>
+
             </paper-material>
           </section>
 
