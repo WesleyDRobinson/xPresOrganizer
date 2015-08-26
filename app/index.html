@@ -44,7 +44,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
   <!-- build:css styles/main.css -->
   <link rel="stylesheet" href="styles/main.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <!-- endbuild-->
 
   <!-- build:js bower_components/webcomponentsjs/webcomponents-lite.min.js -->
@@ -59,10 +58,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <script src="//cdnjs.cloudflare.com/ajax/libs/Sortable/1.2.1/Sortable.min.js"></script>
 
   <!-- Get Firebase -->
-  <script src="https://cdn.firebase.com/js/client/2.2.9/firebase.js"></script>
+  <script src="//cdn.firebase.com/js/client/2.2.9/firebase.js"></script>
 
   <!-- Get lodash -->
-  <script src="https://cdn.jsdelivr.net/lodash/3.10.1/lodash.js"></script>
+  <script src="//cdn.jsdelivr.net/lodash/3.10.1/lodash.js"></script>
+
+  <!-- Get fontawesome -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
 </head>
 
@@ -152,15 +154,20 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               <p><a href="https://github.com/WesleyDRobinson/xPresOrganizer">See all the code for this page on
                 Github <i class="fa fa-github-square"></i></a></p>
 
-              <p>It was just a simple test/ demo site to teach myself Polymer and Firebase</p>
+              <p>Started as a simple test site to teach myself Polymer and Firebase</p>
 
 
-              <p>So, it's embryonic right now; changing daily as I figure goodies!</p>
+              <p>Born August 25, it's still a baby; it will get more interesting as it grows up</p>
 
-              <p>I'm finding this little stack is shockingly powerful and surprisingly light, like a <strong>magic
+            </paper-material>
+            <paper-material elevation="1">
+
+              <h2 class="paper-font-display2">Polymer and Firebase Thoughts</h2>
+
+              <p>I'm finding this little stack to be shockingly powerful and surprisingly light, like a <strong>magic
                 wand!</strong></p>
 
-              <p>I'll write up a starter article soon, it's on the roadmap!</p>
+              <p>I'll write up a much longer article sometime soon, it's on the roadmap!</p>
 
             </paper-material>
             <paper-material elevation="1">
@@ -168,6 +175,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               <h2 class="paper-font-display2">Actively Interviewing</h2>
 
               <p>I'm looking to join a Javascript Engineering team in San Francisco!</p>
+
               <p><a href="https://www.linkedin.com/in/wesleydrobinson">Look at me on LinkedIn</a></p>
 
               <p>On Aug 23, I climbed around in this tree looking for a job</p>
@@ -192,20 +200,20 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             <paper-material elevation="1">
               <h2 class="paper-font-display2">Users</h2>
 
-              <h3>Test Login:</h3>
+              <p>Securely login using a Github account, thanks to Firebase Auth service</p>
 
-              <p>Securely login with Github account, thanks to Firebase Auth service</p>
 
-              <p>If you login, your username will appear here:<a href="/users/{{user.github.username}}">{{user.github.username}}</a>
-              </p>
+              <p>If you login, your photo will appear below this line</p>
 
-              <p>Logout when you're finished looking at your name!</p>
+              <div hidden="{{!user}}">
+                <img width="230" height="230" src="{{user.github.profileImageURL}}">
+              </div>
 
-              <p>More user integration on the roadmap</p>
+              <p>Logout when you're finished looking at yourself!</p>
 
+              <p>More user integration and login options on the roadmap</p>
               <div if="{{user}}"></div>
-            </paper-material>
-            <paper-material elevation="1">
+
               <div id="login-logout">
                 <paper-button role="button" on-click="login" hidden?="{{!statusKnown || user}}" noink>login
                 </paper-button>
@@ -269,16 +277,21 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <section data-route="contact">
             <paper-material elevation="1">
               <h2 class="paper-font-display2">Contact</h2>
+
               <div id="contact-me" style="padding: 3px; font-size: 2em;">
-                <a href="https://github.com/WesleyDRobinson" style="color: #3F51B5;"><i class="fa fa-github-alt"></i></a>
+                <a href="https://github.com/WesleyDRobinson" style="color: #3F51B5;"><i
+                  class="fa fa-github-alt"></i></a>
 
-                <a href="https://www.linkedin.com/in/wesleydrobinson" style="color: #3F51B5;"><i class="fa fa-linkedin"></i></a>
+                <a href="https://www.linkedin.com/in/wesleydrobinson" style="color: #3F51B5;"><i
+                  class="fa fa-linkedin"></i></a>
 
-                <a href="https://www.facebook.com/robinsonwesleyd" style="color: #3F51B5;"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.facebook.com/robinsonwesleyd" style="color: #3F51B5;"><i
+                  class="fa fa-facebook"></i></a>
 
                 <a href="https://twitter.com/5Fwesley" style="color: #3F51B5;"><i class="fa fa-twitter"></i></a>
 
-                <a onclick="alert('I don\'t connect on Reddit! Do you?')" style="color: #3F51B5;"><i class="fa fa-reddit"></i></a>
+                <a onclick="alert('I don\'t connect on Reddit! Do you?')" style="color: #3F51B5;"><i
+                  class="fa fa-reddit"></i></a>
               </div>
 
               <p>I really love the web and Javascript</p>
