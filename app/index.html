@@ -44,6 +44,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
   <!-- build:css styles/main.css -->
   <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <!-- endbuild-->
 
   <!-- build:js bower_components/webcomponentsjs/webcomponents-lite.min.js -->
@@ -85,24 +86,31 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <span>Home</span>
         </a>
 
-        <a data-route="users" href="/users">
+        <a data-route="about" href="/about">
           <iron-icon icon="info"></iron-icon>
-          <span>Users</span>
-        </a>
-
-        <a data-route="presentations" href="/presentations">
-          <iron-icon icon="communication:present-to-all"></iron-icon>
-          <span>Presentations</span>
-        </a>
-
-        <a data-route="meetings" href="/meetings">
-          <iron-icon icon="event"></iron-icon>
-          <span>Meetings</span>
+          <span>Resume</span>
         </a>
 
         <a data-route="contact" href="/contact">
           <iron-icon icon="mail"></iron-icon>
           <span>Contact</span>
+        </a>
+
+        <a><span>Polymer<-->Firebase Sandbox:</span></a>
+
+        <a data-route="users" href="/users">
+          <iron-icon icon="social:person-outline"></iron-icon>
+          <span>Login Demo</span>
+        </a>
+
+        <a data-route="presentations" href="/presentations">
+          <iron-icon icon="communication:present-to-all"></iron-icon>
+          <span>Slide Arrange Demo</span>
+        </a>
+
+        <a data-route="meetings" href="/meetings">
+          <iron-icon icon="event"></iron-icon>
+          <span>Meeting Organizer Demo</span>
         </a>
       </paper-menu>
     </paper-scroll-header-panel>
@@ -126,7 +134,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
         <!-- Application sub title -->
         <div class="bottom bottom-container center horizontal layout">
-          <div class="bottom-title paper-font-subhead">Est. 8/25/15, this is a resume/ link/ demo/ portal/ blawg? personal site</div>
+          <div class="bottom-title paper-font-subhead">Fullstack Javascript Engineer</div>
         </div>
 
       </paper-toolbar>
@@ -136,28 +144,48 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         <iron-pages attr-for-selected="data-route" selected="{{route}}">
 
           <section data-route="home">
-            <paper-material elevation="1">
-
-              <h2 class="paper-font-display2">Welcome!</h2>
-              <p>On Aug 23, I climbed around in this tree looking for a job</p>
-              <iron-image src="http://i.imgur.com/6deJNVZ.jpg" style="width: 200px; height: 200px; background-color: lightgray;"
-                          sizing="cover" preload fade></iron-image>
-              <p>Didn't find one; so I'm still looking for a Frontend Engineering role!</p>
-              <p><a href="https://www.linkedin.com/in/wesleydrobinson">Look at me on LinkedIn</a></p>
-
-            </paper-material>
 
             <paper-material elevation="1">
 
               <h2 class="paper-font-display2">Site Reasoning</h2>
-              <p><a href="https://github.com/WesleyDRobinson/xPresOrganizer">See all the code for this page on Github</a></p>
-              <p>Project was just a simple rebuild of an old project to teach myself Polymer and Firebase</p>
-              <p>I'm finding this little stack is shockingly powerful and surprisingly light, like a <strong>magic wand!</strong></p>
-              <p>I also discovered hosting and deploying to Firebase is insanely easy. So as of 8/25/15 this is my personal site</p>
+
+              <p><a href="https://github.com/WesleyDRobinson/xPresOrganizer">See all the code for this page on
+                Github <i class="fa fa-github-square"></i></a></p>
+
+              <p>It was just a simple test/ demo site to teach myself Polymer and Firebase</p>
+
+
+              <p>So, it's embryonic right now; changing daily as I figure goodies!</p>
+
+              <p>I'm finding this little stack is shockingly powerful and surprisingly light, like a <strong>magic
+                wand!</strong></p>
+
               <p>I'll write up a starter article soon, it's on the roadmap!</p>
 
             </paper-material>
+            <paper-material elevation="1">
 
+              <h2 class="paper-font-display2">Actively Interviewing</h2>
+
+              <p>I'm looking to join a Javascript Engineering team in San Francisco!</p>
+              <p><a href="https://www.linkedin.com/in/wesleydrobinson">Look at me on LinkedIn</a></p>
+
+              <p>On Aug 23, I climbed around in this tree looking for a job</p>
+              <iron-image src="http://i.imgur.com/6deJNVZ.jpg"
+                          style="width: 200px; height: 200px; background-color: lightgray;"
+                          sizing="cover" preload fade></iron-image>
+              <p>Didn't find one</p>
+
+
+            </paper-material>
+
+          </section>
+
+          <section data-route="about">
+            <paper-material>
+              <h2 class="paper-font-display2">Wesley's Resume</h2>
+              <wesley-resume></wesley-resume>
+            </paper-material>
           </section>
 
           <section data-route="users">
@@ -165,10 +193,16 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               <h2 class="paper-font-display2">Users</h2>
 
               <h3>Test Login:</h3>
+
               <p>Securely login with Github account, thanks to Firebase Auth service</p>
-              <p>If you login, your username will appear here:<a href="/users/{{user.github.username}}">{{user.github.username}}</a></p>
+
+              <p>If you login, your username will appear here:<a href="/users/{{user.github.username}}">{{user.github.username}}</a>
+              </p>
+
               <p>Logout when you're finished looking at your name!</p>
+
               <p>More user integration on the roadmap</p>
+
               <div if="{{user}}"></div>
             </paper-material>
             <paper-material elevation="1">
@@ -201,9 +235,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
               <h2 class="paper-font-display2">Presentations</h2>
 
-              <p>The following slides are ordered and sortable and automatically persist in the database! <strong>Pretty cool right?!</strong></p>
-              <p>Try it! Rearrange some slides, close this page, and come back to see your changes</p>
-              <p>"Adding Presentations" is on the roadmap; so is fixing the border disappearing&mdash;it's a <span style="font-family: Courier New">paper-material</span> thing</p>
+              <p>The following slides are ordered and sortable and automatically persist in the database! <strong>Pretty
+                cool right?!</strong></p>
+
+              <p>Try it! Rearrange some slides, leave this page, and come back to see your changes stick around</p>
+
+              <p>"Adding Presentations" is on the roadmap; so is fixing the border disappearing&mdash;it's a <span
+                style="font-family: Courier New">paper-material</span> thing</p>
 
               <presentations-container></presentations-container>
 
@@ -215,9 +253,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             <paper-material elevation="1">
 
               <h2 class="paper-font-display2">Meetings</h2>
-              <p>The following meetings are also tied to the database and some parts are editable and those edits persist to the database</p>
-              <p>Try it! Change some names and dates, close this page, and come back to see your changes</p>
-              <p>You will be able to add organizers and create events and all those cool features! It's all on the roadmap</p>
+
+              <p>The following meetings are also tied to the database and some parts are editable and those edits
+                persist to the database</p>
+
+              <p>Try it! Rearrange some slides, leave this page, and come back to see your changes stick around</p>
+
+              <p>You will be able to add organizers and create events and all those cool features! It's all on the
+                roadmap</p>
               <meetings-container></meetings-container>
 
             </paper-material>
@@ -226,14 +269,28 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <section data-route="contact">
             <paper-material elevation="1">
               <h2 class="paper-font-display2">Contact</h2>
+              <div id="contact-me" style="padding: 3px; font-size: 2em;">
+                <a href="https://github.com/WesleyDRobinson" style="color: #3F51B5;"><i class="fa fa-github-alt"></i></a>
 
-              <h3 class="red">Completed as promised: <small>Roadmap item: <em>Add contact info</em></small></h3>
-              <p class="paper-font-subhead"></p>
+                <a href="https://www.linkedin.com/in/wesleydrobinson" style="color: #3F51B5;"><i class="fa fa-linkedin"></i></a>
+
+                <a href="https://www.facebook.com/robinsonwesleyd" style="color: #3F51B5;"><i class="fa fa-facebook"></i></a>
+
+                <a href="https://twitter.com/5Fwesley" style="color: #3F51B5;"><i class="fa fa-twitter"></i></a>
+
+                <a onclick="alert('I don\'t connect on Reddit! Do you?')" style="color: #3F51B5;"><i class="fa fa-reddit"></i></a>
+              </div>
 
               <p>I really love the web and Javascript</p>
+
               <p>I want to engineer software with a smart, fun team using interesting tech</p>
+
               <p>Call me at 417.848.5114</p>
-              <p>Email me at <a href="mailto:Robinson.WesleyD@gmail.com?subject=Wesley,%20you're%20Hired!%20When%20can%20you%20start?%20:)&body=Seriously%20though,%20let's%20set%20up%20a%20phone%20call">Robinson.WesleyD@gmail.com</a></p>
+
+              <p>Email me at <a
+                href="mailto:Robinson.WesleyD@gmail.com?subject=Wesley,%20you're%20Hired!%20When%20can%20you%20start?%20:)&body=Seriously%20though,%20let's%20set%20up%20a%20phone%20call">Robinson.WesleyD@gmail.com</a>
+              </p>
+
               <p>Slick animations are on the roadmap</p>
 
             </paper-material>
