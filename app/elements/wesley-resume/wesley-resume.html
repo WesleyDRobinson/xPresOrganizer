@@ -1,14 +1,29 @@
 <dom-module id="wesley-resume">
   <style>
-    img {
-      max-width: 100%;
+    .pdf-container {
+      position: relative;
+      padding-bottom: 110%;
+      padding-top: 0px;
+      height: 0;
+      overflow: hidden;
+    }
+
+    .pdf-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
     }
   </style>
+
   <template>
-    <div>
-      <img src="../../images/resume.png">
-      <h6>Last Updated August 1, 2015</h6>
+
+    <div class="pdf-container">
+      <!--<iframe src="https://dl.dropboxusercontent.com/u/1553911/Wesley%20Robinson%20&#45;&#45;%20Fullstack%20Developer.pdf"-->
+              <!--height="792" width="612" allowfullscreen="" frameborder="0"></iframe>-->
     </div>
+
   </template>
 
   <script>
