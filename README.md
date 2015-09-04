@@ -1,10 +1,9 @@
 # My Personal Site!
-## Started as xPresOrganizer
+## There are lots of code samples, demos, and my resume;
+## It's also my sandbox for exploring Polymer, Web Components and Firebase;
 
-> A rebuild of that other PresOrganizer, but much better.
+MV* framework; there is much less code than it seems like there should be and it's even abstracted away into custom, reusable elements.
 
-
-I'm using Polymer/ Web Components for the complete build.
-The only server/backend I'll need is Firebase.
+This way of programming is delightful!
 
 Totally live at: https://www.wesley.tech
