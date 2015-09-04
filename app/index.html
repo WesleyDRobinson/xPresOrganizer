@@ -66,6 +66,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <!-- Get fontawesome -->
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
+  <!-- Get jQuery -->
+  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
 </head>
 
 <body unresolved class="fullbleed layout vertical">
@@ -88,7 +92,17 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <span>Home</span>
         </a>
 
-        <a data-route="about" href="/about">
+        <a data-route="bio" href="/bio">
+          <iron-icon icon="accessibility"></iron-icon>
+          <span>Bio</span>
+        </a>
+
+        <a data-route="code" href="/code">
+          <iron-icon icon="code"></iron-icon>
+          <span>Code</span>
+        </a>
+
+        <a data-route="resume" href="/resume">
           <iron-icon icon="info"></iron-icon>
           <span>Resume</span>
         </a>
@@ -136,7 +150,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
         <!-- Application sub title -->
         <div class="bottom bottom-container center horizontal layout">
-          <div class="bottom-title paper-font-subhead">Fullstack Javascript Engineer</div>
+          <div class="bottom-title paper-font-subhead">Problem Solver, Javascript Programmer</div>
         </div>
 
       </paper-toolbar>
@@ -149,15 +163,17 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
             <paper-material elevation="1">
 
-              <h2 class="paper-font-display2">Site Reasoning</h2>
+              <h2 class="paper-font-display2">Welcome!</h2>
+
+              <p>Born late August, my personal site is still a baby; it will get more interesting as it grows up</p>
+
+              <p>It's built using only Polymer and Firebase</p>
+
+              <p>The Sandbox portion are demos for the rebuild of my Fullstack Academy capstone app</p>
 
               <p><a href="https://github.com/WesleyDRobinson/xPresOrganizer">See all the code for this page on
                 Github <i class="fa fa-github-square"></i></a></p>
 
-              <p>Started as a simple test site to teach myself Polymer and Firebase</p>
-
-
-              <p>Born August 25, it's still a baby; it will get more interesting as it grows up</p>
 
             </paper-material>
             <paper-material elevation="1">
@@ -189,11 +205,28 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
           </section>
 
-          <section data-route="about">
-            <paper-material>
+          <section data-route="bio">
+            <paper-material elevation="1">
+              <wesley-bio></wesley-bio>
+            </paper-material>
+
+          </section>
+
+          <section data-route="code">
+            <paper-material elevation="1">
+              <code-lcs></code-lcs>
+            </paper-material>
+          </section>
+
+          <section data-route="resume">
+            <paper-material elevation="1">
               <h2 class="paper-font-display2">Wesley's Resume</h2>
               <wesley-resume></wesley-resume>
             </paper-material>
+            <!--<paper-material>-->
+            <!--<h2 class="paper-font-display2">Pa-isms</h2>-->
+            <!--<pa-bob></pa-bob>-->
+            <!--</paper-material>-->
           </section>
 
           <section data-route="users">
@@ -212,6 +245,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               <p>Logout when you're finished looking at yourself!</p>
 
               <p>More user integration and login options on the roadmap</p>
+
               <div if="{{user}}"></div>
 
               <div id="login-logout">
@@ -285,13 +319,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                 <a href="https://www.linkedin.com/in/wesleydrobinson" style="color: #3F51B5;"><i
                   class="fa fa-linkedin"></i></a>
 
-                <a href="https://www.facebook.com/robinsonwesleyd" style="color: #3F51B5;"><i
-                  class="fa fa-facebook"></i></a>
-
                 <a href="https://twitter.com/5Fwesley" style="color: #3F51B5;"><i class="fa fa-twitter"></i></a>
 
-                <a onclick="alert('I don\'t connect on Reddit! Do you?')" style="color: #3F51B5;"><i
-                  class="fa fa-reddit"></i></a>
               </div>
 
               <p>I really love the web and Javascript</p>
@@ -308,6 +337,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
             </paper-material>
           </section>
+
 
         </iron-pages>
       </div>
@@ -335,6 +365,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 <!-- build:js scripts/app.js -->
 <script src="scripts/app.js"></script>
+<script src="scripts/space.min.js"></script>
 <!-- endbuild-->
 </body>
 
