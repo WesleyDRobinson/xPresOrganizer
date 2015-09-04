@@ -2,13 +2,13 @@
   <style>
     .pdf-container {
       position: relative;
-      padding-bottom: 110%;
+      padding-bottom: 107%;
       padding-top: 0px;
       height: 0;
       overflow: hidden;
     }
 
-    .pdf-container iframe {
+    .pdf-container object {
       position: absolute;
       top: 0;
       left: 0;
@@ -18,10 +18,13 @@
   </style>
 
   <template>
-
+    <a href="https://drive.google.com/file/d/0B0zGaowsVWyxYkJmSVZPdGhLT3M/view?usp=sharing">View in
+      Google Drive</a>
     <div class="pdf-container">
-      <!--<iframe src="https://dl.dropboxusercontent.com/u/1553911/Wesley%20Robinson%20&#45;&#45;%20Fullstack%20Developer.pdf"-->
-              <!--height="792" width="612" allowfullscreen="" frameborder="0"></iframe>-->
+      <object data="/images/resume.pdf" type="application/pdf"
+              height="792" width="612">
+        <p>Unfortunately, embedding the resume failed</p>
+      </object>
     </div>
 
   </template>
